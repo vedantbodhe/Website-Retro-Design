@@ -1,0 +1,226 @@
+/* General Body Style */
+body {
+    font-family: 'Press Start 2P', Arial, sans-serif; /* Retro pixel-style font */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f7efd2; /* Soft pastel background */
+    color: #444;
+    overflow: hidden; /* Prevent scrolling when the cookie banner is displayed */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333; /* Dark background for contrast */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #ffd966; /* Retro yellow */
+}
+
+.navbar .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+/* Button Styles */
+button {
+    font-family: 'Press Start 2P', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05); /* Slight hover effect */
+    opacity: 0.95;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Allow scrolling once the banner is dismissed */
+.hidden + #main-content {
+    overflow: auto;
+}
+
+/* CONSENT BANNER RELATED */
+
+/* Cookie Banner and Settings Menu */
+.cookie-banner, .settings-menu {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #ffd966;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* Banner Heading */
+.cookie-banner h2, .settings-menu h2 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    color: #ffd966;
+}
+
+/* Banner Text */
+.cookie-banner p, .settings-menu p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #ddd;
+}
+
+/* Actions Section (Buttons within Banner and Settings Menu) */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Specific Button Colors for Banner */
+.settings-btn {
+    background-color: #444;
+    color: #ffd966;
+}
+
+.essential-btn {
+    background-color: #c0392b;
+    color: white;
+}
+
+.accept-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.save-settings-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.cancel-settings-btn {
+    background-color: #c0392b;
+    color: white;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #888;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ffd966;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* MAIN CONTENT RELATED */
+
+/* Hero Carousel */
+.hero-carousel img {
+    height: 60vh;
+    object-fit: cover;
+    filter: sepia(20%) brightness(1.1); /* Retro photo effect */
+}
+
+/* Info Card Styles */
+.info-card {
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ffd966;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section input, .contact-section textarea {
+    border: 2px solid #ffd966;
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: #ffd966;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.footer a {
+    color: #ffd966;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
