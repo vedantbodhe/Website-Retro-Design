@@ -1,6 +1,6 @@
 /* General Body Style */
 body {
-    font-family: 'Press Start 2P', Arial, sans-serif; /* Retro pixel-style font */
+    font-family: 'Jersey 20', Arial, sans-serif; /* Decorative font for all text */
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -16,7 +16,7 @@ body {
 }
 
 .navbar-brand {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.8rem;
     color: #ffd966; /* Retro yellow */
 }
@@ -25,12 +25,12 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-size: 0.9rem;
-    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-family: 'Jersey 20', Arial, sans-serif;
 }
 
 /* Button Styles */
 button {
-    font-family: 'Press Start 2P', sans-serif;
+    font-family: 'Jersey 20', sans-serif;
     font-weight: 500;
     padding: 10px 20px;
     font-size: 0.9rem;
@@ -76,8 +76,8 @@ button:hover {
 
 /* Banner Heading */
 .cookie-banner h2, .settings-menu h2 {
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Jersey 20', sans-serif;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-top: 0;
     color: #ffd966;
@@ -85,9 +85,15 @@ button:hover {
 
 /* Banner Text */
 .cookie-banner p, .settings-menu p {
+    font-family: 'Jersey 20', sans-serif; /* Ensure uniformity */
     font-size: 0.9rem;
     font-weight: 400;
     color: #ddd;
+}
+
+#privacy-settings-text {
+    font-weight: bold; /* Makes the text bold */
+    font-size: 18px; /* Adjust the size as needed */
 }
 
 /* Actions Section (Buttons within Banner and Settings Menu) */
@@ -105,7 +111,7 @@ button:hover {
 }
 
 .essential-btn {
-    background-color: #c0392b;
+    background-color: #27ae60;
     color: white;
 }
 
@@ -120,7 +126,7 @@ button:hover {
 }
 
 .cancel-settings-btn {
-    background-color: #c0392b;
+    background-color: #27ae60;
     color: white;
 }
 
@@ -136,6 +142,16 @@ button:hover {
     opacity: 0;
     width: 0;
     height: 0;
+}
+
+.switch input:disabled + .slider {
+    background-color: #ccc; /* Grey background for the slider */
+    cursor: not-allowed; /* Change cursor to indicate it is not clickable */
+    opacity: 0.7; /* Reduce opacity to give a "disabled" effect */
+}
+
+.switch input:disabled + .slider:before {
+    background-color: #999; /* Grey for the knob */
 }
 
 .slider {
@@ -213,7 +229,7 @@ input:checked + .slider:before {
     color: #ffd966;
     padding: 20px 0;
     text-align: center;
-    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-family: 'Jersey 20', sans-serif;
 }
 
 .footer a {

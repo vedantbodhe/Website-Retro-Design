@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -19,20 +21,21 @@
     <!-- Cookie Consent Banner -->
 <div id="cookie-banner" class="cookie-banner">
     <h2>Cookie Settings</h2>
-    <p>
-        We use cookies to improve your browsing experience. <br>By clicking "Accept All," you agree to the use of
-        all cookies.
-        <br>Click "Essential Only" to allow only necessary cookies, or "Manage Settings" to customize your
-        preferences.
+    <p id="privacy-settings-text">
+        We use cookies and similar technologies to measure usage, display personalized advertising and share personal data and information with up to a 100 third parties.<br> 
+        <br>You decide for yourself whether you agree to this use of your data.<br>
+        <br>You can adjust individual details under “Settings” and change them at any time.<br>
+        <br>You can view all of the content without agreeing.<br>
+        <br>By clicking "Accept All," you agree to the use of all cookies.
     </p>
     <div class="actions">
-        <button id="settings-btn" class="settings-btn">Manage Settings</button>
-        <button id="essential-btn" class="essential-btn">Essential Only</button>
-        <button id="accept-btn" class="accept-btn">Accept All</button>
+        <button id="accept-btn" class="accept-btn">Accept All <i class="fa-solid fa-check"></i> </button>
+        <button id="essential-btn" class="essential-btn">Decline All <i class="fa-solid fa-xmark"></i> </button>
+        <button id="settings-btn" class="settings-btn">Manage my Preferences</button>
     </div>
     <br>
     <div class="powered-by">
-        Powered by Minimalistic Consent Management
+        Powered by Retro Consent Management
     </div>
 </div>
 
@@ -40,13 +43,15 @@
 <div id="settings-menu" class="settings-menu hidden">
     <h2>Privacy Settings</h2>
     <p>
-        Customize your preferences for cookies. You can select which types of cookies you want to allow.
+        On this page you can individually set your permission to use your data.
+        <br>Activating a setting means that you agree to the processing of your personal data by the respective provider. 
+        <br>The choices you make regarding the purposes and entities listed in this notice are saved for a maximum duration of 365 days.
     </p>
     <div class="categories">
         <div class="category">
             <span>Marketing</span>
             <label class="switch">
-                <input type="checkbox" id="marketing-toggle" checked>
+                <input type="checkbox" id="marketing-toggle">
                 <span class="slider round"></span>
             </label>
             <p>These cookies are used by advertisers to show ads relevant to your interests.</p>
@@ -54,7 +59,7 @@
         <div class="category">
             <span>Functional</span>
             <label class="switch">
-                <input type="checkbox" id="functional-toggle" checked>
+                <input type="checkbox" id="functional-toggle">
                 <span class="slider round"></span>
             </label>
             <p>These cookies help us analyze website usage and improve its performance.</p>
@@ -69,8 +74,16 @@
         </div>
     </div>
     <div class="actions">
-        <button id="save-settings-btn" class="save-settings-btn">Save Settings</button>
-        <button id="cancel-settings-btn" class="cancel-settings-btn">Cancel</button>
+        <!-- "Decline All" button moved to second layer -->
+        <button id="essential-btn" class="essential-btn btn btn-success">
+            Decline All
+        </button>
+        <button id="save-settings-btn" class="save-settings-btn btn btn-success">
+            Save Preferences
+        </button>
+        <button id="cancel-settings-btn" class="cancel-settings-btn btn btn-outline-secondary">
+            Go Back
+        </button>
     </div>
 </div>
 
