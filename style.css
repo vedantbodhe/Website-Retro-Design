@@ -30,14 +30,14 @@ body {
 
 /* Button Styles */
 button {
-    font-family: 'Jersey 20', sans-serif;
-    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500; /* Medium weight for buttons */
     padding: 10px 20px;
     font-size: 0.9rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
@@ -59,40 +59,43 @@ button:hover {
 
 /* Cookie Banner and Settings Menu */
 .cookie-banner, .settings-menu {
+    font-family: 'Lexend', sans-serif;
     max-width: 500px;
+    max-height: 80vh; /* Restrict height to 80% of viewport */
     padding: 20px;
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #ffd966;
+    background-color: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    overflow-y: auto; /* Enable scrolling when content exceeds height */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
+    z-index: 9999; /* Ensure banner appears above other elements */
 }
 
 /* Banner Heading */
 .cookie-banner h2, .settings-menu h2 {
-    font-family: 'Jersey 20', sans-serif;
+    font-family: 'Lexend', sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 700; /* Use bold weight for headings */
     margin-top: 0;
-    color: #ffd966;
+    color: #333;
 }
 
 /* Banner Text */
 .cookie-banner p, .settings-menu p {
-    font-family: 'Jersey 20', sans-serif; /* Ensure uniformity */
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #ddd;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+    font-weight: 400; /* Regular weight for paragraphs */
+    margin: 10px 0;
+    color: #666;
 }
 
 #privacy-settings-text {
-    font-weight: bold; /* Makes the text bold */
+    /* font-weight: bold; */ /* Makes the text bold */
     font-size: 18px; /* Adjust the size as needed */
 }
 
@@ -106,8 +109,8 @@ button:hover {
 
 /* Specific Button Colors for Banner */
 .settings-btn {
-    background-color: #444;
-    color: #ffd966;
+    background-color: #eaeaea;
+    color: #333;
 }
 
 .essential-btn {
