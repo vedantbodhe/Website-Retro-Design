@@ -7,6 +7,8 @@ body {
     background-color: #f7efd2; /* Soft pastel background */
     color: #444;
     overflow: hidden; /* Prevent scrolling when the cookie banner is displayed */
+    display: flex; /* Use Flexbox to align children vertically */
+    flex-direction: column; /* Stack elements (header, main-content, footer) in a column */
 }
 
 /* Navbar Styles */
@@ -38,6 +40,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    max-width: 100%; /* Prevent buttons from growing too wide */
 }
 
 button:hover {
@@ -60,7 +63,9 @@ button:hover {
 /* Cookie Banner and Settings Menu */
 .cookie-banner, .settings-menu {
     font-family: 'Lexend', sans-serif;
+    width: 90%; /* Adjust for responsiveness */
     max-width: 500px;
+    height: auto; /* Automatically adjust height */
     max-height: 80vh; /* Restrict height to 80% of viewport */
     padding: 20px;
     background-color: white;
@@ -74,6 +79,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999; /* Ensure banner appears above other elements */
+    box-sizing: border-box; /* Include padding and border in dimensions */
 }
 
 /* Banner Heading */
@@ -92,16 +98,17 @@ button:hover {
     font-weight: 400; /* Regular weight for paragraphs */
     margin: 10px 0;
     color: #666;
+    word-wrap: break-word; /* Ensure long text breaks properly */
 }
 
 #privacy-settings-text {
-    /* font-weight: bold; */ /* Makes the text bold */
     font-size: 18px; /* Adjust the size as needed */
 }
 
 /* Actions Section (Buttons within Banner and Settings Menu) */
 .actions {
     display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line if necessary */
     justify-content: center;
     gap: 10px;
     margin-top: 15px;
@@ -191,10 +198,17 @@ input:checked + .slider:before {
 
 /* MAIN CONTENT RELATED */
 
+/* Main Content Area */
+#main-content {
+    flex: 1; /* Allow this section to grow and take up available space */
+    padding: 20px; /* Optional: padding for spacing */
+}
+
 /* Hero Carousel */
 .hero-carousel img {
     height: 60vh;
     object-fit: cover;
+    max-width: 100%; /* Ensure images are responsive */
     filter: sepia(20%) brightness(1.1); /* Retro photo effect */
 }
 
@@ -231,8 +245,9 @@ input:checked + .slider:before {
     background: #222;
     color: #ffd966;
     padding: 20px 0;
-    text-align: center;
-    font-family: 'Jersey 20', sans-serif;
+    text-align: center; /* Center-align text */
+    font-family: 'Jersey 20', sans-serif; /* Apply the decorative font */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow for visual separation */
 }
 
 .footer a {
@@ -242,4 +257,27 @@ input:checked + .slider:before {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* MEDIA QUERY FOR SMALL SCREENS */
+@media (max-width: 768px) {
+    .cookie-banner, .settings-menu {
+        width: 95%; /* Adjust to fit smaller screens */
+        max-width: none; /* Remove width limit for mobile */
+        max-height: 90vh; /* Adjust height for better use of screen space */
+        padding: 15px;
+    }
+
+    .cookie-banner h2, .settings-menu h2 {
+        font-size: 1.2rem; /* Reduce font size for headings */
+    }
+
+    .cookie-banner p, .settings-menu p {
+        font-size: 0.9rem; /* Adjust text size for better readability */
+    }
+
+    .actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap between buttons */
+    }
 }
