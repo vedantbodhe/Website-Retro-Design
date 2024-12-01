@@ -133,3 +133,15 @@ window.addEventListener('beforeunload', (event) => {
     logAction('Page Reload');
     sendUserActionsToGoogleSheet(); // Send user actions before the page reloads or exits
 });
+
+document.getElementById('retro-contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent actual form submission
+    
+    // Show the thank-you modal
+    document.getElementById('thank-you-modal').style.display = 'block';
+});
+
+// Close the modal on button click
+document.getElementById('close-modal').addEventListener('click', function () {
+    document.getElementById('thank-you-modal').style.display = 'none';
+});
